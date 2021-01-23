@@ -1,13 +1,8 @@
-type Sample {
-  some: String!
-  values: [Value]
-}
-
-type Value {
-  random: Boolean!
-  data: String
+type Person {
+  name: String!
+  films: [String]
 }
 
 type Query {
-  quickExample(text: String): Sample
+  quickExample(id: String): Person
 }
