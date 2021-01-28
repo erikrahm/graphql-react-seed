@@ -1,5 +1,9 @@
-import React from "react";
 import { useQuery, gql } from "@apollo/client";
+
+import {
+  Query as SampleQuery,
+  QueryQuickExampleArgs,
+} from "../generated/graphql";
 
 const SAMPLE_QUERY = gql`
   query GetExchangeRates {
@@ -11,7 +15,10 @@ const SAMPLE_QUERY = gql`
 `;
 
 const Person = () => {
-  const { loading, error, data } = useQuery(SAMPLE_QUERY);
+  const { loading, error, data } = useQuery<
+    SampleQuery,
+    QueryQuickExampleArgs
+  >(SAMPLE_QUERY, { variables: { id: "1" } });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>
@@ -20,7 +27,7 @@ const Person = () => {
     <div>
       <header>
         <p>
-          {`The main character of the original Star Wars trilogy is ${data.quickExample.name}`}
+          {`The main character of the original Star Wars trilogy is ${data?.quickExample?.name}`}
         </p>
       </header>
     </div>

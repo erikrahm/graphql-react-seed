@@ -1,12 +1,13 @@
 # GraphQL/REST/React Seed Project
 Server: Apollo GraphQL/Express/REST Wrapper
+
 Client: Apollo Client/React
 
 ## Seed Project Demo Quickstart
 As a means for a quickstart this project has defaults already set up to use the Star Wars API (https://swapi.dev/). So you can clone this repo down and see a working GraphQL server which is consuming an external REST API, resolving that data, and making it queriable by our React frontend.
 
-  1. Install dependencies for both server and client by running `npm (or yarn) run install-all` in the root of the project.
-  2. Start up both projects by running `npm start` in the root of the project`
+  1. Install dependencies for both server and client by running `yarn install-all` in the root of the project.
+  2. Start up both projects by running `yarn start` in the root of the project`
 
 ## Seed Project setup
 
