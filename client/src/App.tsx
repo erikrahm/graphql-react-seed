@@ -1,4 +1,3 @@
-import React from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 import Person from './components/Person'
